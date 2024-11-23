@@ -1,0 +1,33 @@
+Informe del proceso realizado:
+Realizamos la instalación de programas:
+•	GitHub
+•	Git
+•	Codeblock
+•	Visual Studio
+
+Validamos las descargas:
+1.	Se valida si el resultado es la versión descargada
+Jhoao@Laptop-MCAC MINGW64 ~
+$ git --version
+git version 2.47.0.windows.2
+
+Configurar GitHub
+1.	Abre la terminal o consola y configura tu usuario y correo electrónico:
+Jhoao@Laptop-MCAC MINGW64 ~
+$ git config --global user.name"Carolina-ESPE"
+
+Jhoao@Laptop-MCAC MINGW64 ~
+$ git config --global user.email"mcangamarca@espe.edu.ec"
+
+2.	Crear un repositorio local: Crea una carpeta en tu computadora donde guardarás tu proyecto C++. Dentro de esa carpeta, abre tu terminal o línea de comandos y ejecuta:
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC
+$ git init
+Initialized empty Git repository in C:/GITMCAC/.git/
+
+Esto inicializa un repositorio Git local.
+
+3.	Escribir tu código C++: Crea tus archivos .cpp y .h (archivos de encabezado) en esta carpeta. Asegúrate de que tu código compile correctamente en tu entorno local.
+
+4.	Agregar tus archivos a Git: En tu terminal, desde la carpeta de tu proyecto:
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC (master)
+$ git add main.cpp
