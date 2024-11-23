@@ -1,33 +1,92 @@
+UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE
+Actividad de Aprendizaje Contacto Docente
+
+Nombre: Carolina Angamarca	NRC: 1322
+
 Informe del proceso realizado:
-Realizamos la instalación de programas:
-•	GitHub
-•	Git
-•	Codeblock
-•	Visual Studio
+1.- Realizamos la instalación de programas GitHub, Git, Codeblock, Visual Studio.
+2.- Creamos una carpeta local en nuestra computadora.
+Creamos en esta un documento de texto para el informe final.
+ 
+Creamos en code block un lenguaje de programación y lo guardamos en la misma carpeta.
+ 
 
-Validamos las descargas:
-1.	Se valida si el resultado es la versión descargada
-Jhoao@Laptop-MCAC MINGW64 ~
-$ git --version
-git version 2.47.0.windows.2
-
-Configurar GitHub
-1.	Abre la terminal o consola y configura tu usuario y correo electrónico:
-Jhoao@Laptop-MCAC MINGW64 ~
-$ git config --global user.name"Carolina-ESPE"
-
-Jhoao@Laptop-MCAC MINGW64 ~
-$ git config --global user.email"mcangamarca@espe.edu.ec"
-
-2.	Crear un repositorio local: Crea una carpeta en tu computadora donde guardarás tu proyecto C++. Dentro de esa carpeta, abre tu terminal o línea de comandos y ejecuta:
-Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC
+3.- Creamos un repositorio remoto en GitHub
+ 
+4.- Procedemos a verificar en nuestra consola de git los comandos para la conexión con GitHub y su transferencia de datos.
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2
 $ git init
-Initialized empty Git repository in C:/GITMCAC/.git/
+Initialized empty Git repository in C:/GITMCAC2/.git/
 
-Esto inicializa un repositorio Git local.
 
-3.	Escribir tu código C++: Crea tus archivos .cpp y .h (archivos de encabezado) en esta carpeta. Asegúrate de que tu código compile correctamente en tu entorno local.
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2 (master)
+$ git config user.name "Carolina-ESPE"
 
-4.	Agregar tus archivos a Git: En tu terminal, desde la carpeta de tu proyecto:
-Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC (master)
-$ git add main.cpp
+
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2 (master)
+$ git config user.email mcangamarca@espe.edu.ec
+
+
+4.- Copiamos para la conexión remota el url de nuestro GitHub: 
+ 
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2 (master)
+$ git remote add origin https://github.com/Carolina-ESPE/Control-de-Lectura-INIC.git
+
+5.- Revisamos el estado para verificar que archivos consideraremos para la conexión y visualización remota.
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        CB Control de Lectura INIC.CPP
+        CB Control de Lectura INIC.exe
+        CB Control de Lectura INIC.o
+        TXT Control de Lectura INIC.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2 (master)
+$ git add "CB Control de Lectura INIC.CPP"
+
+
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2 (master)
+$ git add "TXT Control de Lectura INIC.txt"
+
+5.- Modificamos con git add aquellos archivos que si necesitamos cargar y revisamos nuevamente el estado
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   CB Control de Lectura INIC.CPP
+        new file:   TXT Control de Lectura INIC.txt
+
+6.- Para confirmar de forma definitiva el archivo para pasarlo a nuestro repositorio remoto utilizamos el comando git commit
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2 (master)
+$ git commit -m "commit definitivo"
+[master (root-commit) 769df69] commit definitivo
+ 2 files changed, 38 insertions(+)
+ create mode 100644 CB Control de Lectura INIC.CPP
+ create mode 100644 TXT Control de Lectura INIC.txt
+
+
+7.- Finalmente utilizamos el comando push para pasar nuestro archivo al repositorio remoto. Se autoriza credenciales y en nuestra consola aparecerá el mensaje de la información transferida.
+Jhoao@Laptop-MCAC MINGW64 /c/GITMCAC2 (master)
+$ git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1000 bytes | 142.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Carolina-ESPE/Control-de-Lectura-INIC.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+8.- Procedemos a verificar en nuestro repositorio remoto de GitHub si se encuentran los archivos cargados
